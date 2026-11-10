@@ -1,0 +1,30 @@
+name: Question
+description: Ask a question or request support
+title: "[QUESTION] "
+labels: ["t:question", "s:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [guide and FAQ](https://phogit.caffeinatedmath.com/) first. Many questions are answered there.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: Steps you have already taken.
+    validations:
+      required: false
+  - type: input
+    id: app_version
+    attributes:
+      label: Phogit version
+      placeholder: "1.0.0 (12)"
+    validations:
+      required: false

@@ -1,0 +1,73 @@
+name: Bug report
+description: Something isn't working as expected
+title: "[BUG] "
+labels: ["t:bug", "s:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. The more we know, the faster we can fix it. If Phogit quit or froze, use the crash report form instead.
+
+        This issue is public. Never paste a personal access token, password or private key, and remove anything private from error messages and screenshots.
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What you did, what you expected, and what happened instead. Include the exact error message.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this ourselves? If it happens with a public repository, link it.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: dropdown
+    id: host
+    attributes:
+      label: Git host
+      description: Where the repository lives, if the problem involves one.
+      options:
+        - GitHub
+        - GitLab
+        - Bitbucket
+        - Codeberg or another Gitea/Forgejo server
+        - A self-hosted server (HTTPS)
+        - A self-hosted server (SSH)
+        - Not related to a host
+    validations:
+      required: false
+  - type: input
+    id: app_version
+    attributes:
+      label: Phogit version
+      description: Find this in Settings > About Phogit.
+      placeholder: "1.0.0 (12)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device model
+      placeholder: "e.g. iPhone 18 Pro, iPad Pro 13-inch (M5)"
+    validations:
+      required: true
+  - type: input
+    id: os_version
+    attributes:
+      label: iOS version
+      placeholder: "e.g. iOS 27.1"
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Screenshots, the repository's size, anything else that seems related.
+    validations:
+      required: false

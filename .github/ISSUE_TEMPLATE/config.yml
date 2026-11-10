@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentation
+    url: https://phogit.caffeinatedmath.com/
+    about: Check the guide, FAQ and known issues first. Many questions are answered there.
+  - name: Email support
+    url: mailto:support@caffeinatedmath.com
+    about: For private support requests, or to send a crash report privately.

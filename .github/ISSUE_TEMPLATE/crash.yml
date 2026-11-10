@@ -1,0 +1,47 @@
+name: Crash report
+description: Phogit quit or froze
+title: "[CRASH] "
+labels: ["t:crash", "s:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sending this. iOS saves a report on your device after a crash or freeze. To find it, open **Settings > About Phogit > Diagnostics** and tap the share button next to the report.
+
+        This issue is public, so read the report before you attach it. To send it privately, email support@caffeinatedmath.com instead.
+  - type: textarea
+    id: description
+    attributes:
+      label: What were you doing?
+      description: What happened just before Phogit quit or froze? Which screen, which action, and which repository if it's public?
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: Diagnostics report
+      description: Attach the report file (drag it here, or tap the box and choose a file), or paste its contents. iOS can take a day to deliver a report; if Diagnostics is empty, say so and check back later.
+    validations:
+      required: false
+  - type: input
+    id: app_version
+    attributes:
+      label: Phogit version
+      description: Find this in Settings > About Phogit.
+      placeholder: "1.0.0 (12)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device model
+      placeholder: "e.g. iPhone 18 Pro, iPad Pro 13-inch (M5)"
+    validations:
+      required: true
+  - type: input
+    id: os_version
+    attributes:
+      label: iOS version
+      placeholder: "e.g. iOS 27.1"
+    validations:
+      required: true
